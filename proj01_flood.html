@@ -251,3 +251,257 @@
 </body>
 
 </html>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="INFO HTML5 Template">
+
+  <title>Portfolio Details Light</title>
+
+  <!-- Fav Icon -->
+  <link rel="icon" type="image/x-icon" href="../assets/imgs/logo/favicon.png">
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Macondo&display=swap" rel="stylesheet">
+
+
+
+  <!-- All CSS files -->
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="../assets/css/progressbar.css">
+  <link rel="stylesheet" href="../assets/css/meanmenu.min.css">
+  <link rel="stylesheet" href="../assets/css/magnific-popup.css">
+  <link rel="stylesheet" href="../assets/css/basictable.min.css">
+  <link rel="stylesheet" href="../assets/css/master-product-designer.css">
+
+
+
+
+</head>
+
+
+<body class="font-heading-estedad light">
+
+  <!-- Body Ovelay -->
+  <div class="body-overlay"></div>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div id="container" class="container-preloader">
+      <div class="animation-preloader">
+        <div class="spinner"></div>
+        <div class="txt-loading">
+          <span data-text="" class="characters">Flood Mapping</span>
+        </div>
+      </div>
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+    </div>
+  </div>
+
+  <!-- Cursor Animation -->
+  <div class="cursor1"></div>
+
+  <!-- Scroll to top -->
+  <div class="progress-wrap">
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
+    </svg>
+  </div>
+
+  <div class="has-smooth" id="has_smooth"></div>
+  <div id="smooth-wrapper">
+    <div id="smooth-content">
+      <div class="body-wrapper">
+
+
+        <!-- overlay switcher close  -->
+        <div class="overlay-switcher-close"></div>
+
+        <!-- Header area start -->
+        <header class="header__area pos-abs plr-50">
+          <div class="header__inner">
+            <div class="header__logo-3">
+              <a href="index-light.html">
+                <img src="../assets/imgs/logo.png" class="show-light" alt="Site Logo">
+              </a>
+            </div>
+            <div class="header__nav">
+              <nav class="main-menu">
+                <ul>
+                  <li><a href="index.html">home</a></li>
+                  <li><a href="index.html">see other works</a></li>
+                  <li><a href="index.html">contact me</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </header>
+        <!-- Header area end -->
+
+
+        <main>
+
+          <!-- Portfolio section start -->
+          <section class="portfolio__area-2 pt-130 pb-130">
+            <div class="container line ptf-70">
+              <div class="project_detail_cover cf_parallax_image">
+                <img src="../assets/imgs/flood_banner.png" alt="image" data-speed="0.9">
+              </div>
+              <div class="row">
+                <div class="col-xxl-12">
+                  <div class="project__details">
+                    <h1 class="project_details_title">SAR Flood Mapping:<br> Analysis Using GEE and Sentinel-1 SAR Data</h1>
+                    <ul class="project_info">
+                      <li>
+                        <span class="title">Data</span>
+                        <p class="info">Sentinel-1 SAR GRD<br>JRC Global Surface Water Mapping Layers <br>MODIS Land Cover Type Yearly Global 500m <br>Global Human Settlement Layers<br>HydroSHEDS Void-Filled DEM </p>
+                      </li>
+                      <li>
+                        <span class="title">Tools</span>
+                        <p class="info">Google Earth Engine</p>
+                      </li>
+                      <li>
+                        <span class="title">Application</span>
+                        <p><a href="https://auliarahma.users.earthengine.app/view/flood-detection-east-jakarta-2020" class="info" style="color: rgb(37, 164, 214);">Click Here</a></p>
+                        <img src="../assets/imgs/flood3.png" alt="image">
+                      </li>
+                    </ul>
+                    <div class="project_overview">
+                      <h2 class="project_subtag">Data Acquisition and Pre-processing</h2>
+                      <p>The Sentinel-1 SAR GRD imagery, known for its C-band Synthetic Aperture Radar Ground Range Detected capabilities, is sourced through Google Earth Engine. The images undergo pre-processing using the following code snippet to filter and refine the data based on specific parameters such as instrument mode, polarization, pass direction, and resolution.
+                     <div class="code-style">var collection = ee.ImageCollection('COPERNICUS/S1_GRD') .filter(ee.Filter.eq('instrumentMode','IW')) .filter(ee.Filter.listContains('transmitterReceiverPolarisation', polarization)) .filter(ee.Filter.eq('orbitProperties_pass', pass_direction)) .filter(ee.Filter.eq('resolution_meters', 10)) .select(polarization);</div>
+                      </p>
+                    </div>
+                    <img src="../assets/imgs/flood2.png" alt="image">
+                    <div class="project-sm-thumb">
+                      
+                      <!-- <img src="../assets/imgs/flood1.png" alt="image"> -->
+                    </div>
+                    <div class="project_overview">
+                      <h2 class="project_subtag">Flood Detection and Mapping</h2>
+                      <p>The project aims to detect and map flood extents by comparing two sets of Sentinel-1 SAR data. The analysis involves calculating the difference between the pre-flood and post-flood scenarios. To refine the flood mapping results, additional datasets are integrated. For instance, the JRC layer on surface water seasonality helps in masking flood pixels from areas of "permanent" water. Furthermore, connectivity of pixels is computed to reduce noise in the flood extent product, and areas with more than a 5 percent slope are masked out using a Digital Elevation Model to ensure the accuracy of flood mapping.</p>
+                    </div>
+                    <div class="row">
+                      <h2 class="project_subtag">Population and Landcover Analysis</h2>
+                      <div class="col-lg-6">
+                        <p>The project goes a step further by assessing the impact of floods on population density and landcover. Using the JRC Global Human Settlement Population Density layer, the exposed population is calculated by reprojecting the flood layer to the GHSL scale and creating a raster showing only the exposed population. Similarly, the affected agricultural land is determined using the MODIS Land Cover Type Yearly Global 500m data, focusing on cropland and urban areas.</p>
+                      </div>
+                      <div class="col-lg-6">
+                        <p>Cropland areas are identified and quantified by filtering MODIS Land Cover data to extract only cropland pixels. The affected cropland is then calculated using the resampled flood layer, and the area is computed in hectares.
+                          Urban areas are filtered and quantified in a similar manner, using the MODIS Land Cover data and the resampled flood layer. The affected urban area is also computed in hectares to provide a clear picture of the urban impact.
+                          </p>
+                      </div>
+                    
+                    </div>
+                    <br><img src="../assets/imgs/flood4.png" alt="image">
+                    <div class="project_overview">
+                      <h2 class="project_subtag">Visualization and Export</h2>
+                      <p>The results are visualized on Google Earth Engine, displaying various layers such as pre and post-flood SAR mosaics, the difference layer, flooded areas, population density, exposed population, land cover, cropland, affected cropland, urban areas, and affected urban areas. The visual representations are complemented with export functions that allow users to download the imagery for further analysis or reporting. <br><br> This project demonstrates the power of combining Sentinel-1 SAR data with Google Earth Engine for flood mapping and analysis. By accurately mapping flood extents, analyzing the impact on population and landcover, and visualizing the results, this approach offers valuable insights for flood risk management, emergency planning, and mitigation strategies. The integration of additional datasets and the use of advanced filtering and masking techniques ensure the accuracy and reliability of the results, making it an indispensable tool for authorities and organizations involved in disaster management and response planning.</p>
+                    </div>
+                    <video autoplay muted loop style="max-width: 100%;">
+                      <source src="/assets/video/flood.mp4" type="video/mp4">
+                    </video>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Portfolio section end -->
+
+
+          <!-- recent  -->
+          <section class="recentwork__area pb-130">
+            <div class="container">
+              <div class="portfolio-line"></div>
+              <div class="sec-title-wrapper pt-120 pb-60">
+                <h2 class="sec-sub-title pb-20">Portfolio</h2>
+                <h3 class="sec-title">Related Work</h3>
+              </div>
+              <div class="pdesigner-portfolio__flex">
+                <div class="pdesigner-portfolio__item">
+                  <div class="pdesigner-portfolio__thumb">
+                    <a href="portfolio-details-light.html">
+                      <img src="../assets/imgs/portfolio/work-02.png" alt="Portfolio Thumbnail">
+                    </a>
+                  </div>
+                  <div class="pdesigner-portfolio__content">
+                    <ul>
+                      <li><a href="#" class="pdesigner-portfolio__category">UI Design</a>
+                      </li>
+                      <li><a href="portfolio-details-light.html" class="pdesigner-portfolio__title">User Experience</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- /recent  -->
+
+
+        </main>
+
+
+        <!-- Footer section start -->
+        <footer class="footer__area pt-50 pb-50">
+          <div class="container">
+            <div class="row">
+              <div class="col-xxl-12">
+                <ul class="footer__social-2">
+                  <li><a href="https://github.com/auliama" class="btn-hover-mask"><span><i class="fa-brands fa-github"></i></span>
+                      GitHub</a></li>
+                  <li><a href="https://www.linkedin.com/in/auliama/" class="btn-hover-mask"><span><i class="fa-brands fa-linkedin"></i></span>
+                      Linkedin</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <!-- Footer section end -->
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- All JS files -->
+  <script src="../assets/js/jquery-3.6.0.min.js"></script>
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/jquery.magnific-popup.min.js"></script>
+  <script src="../assets/js/swiper-bundle.min.js"></script>
+  <script src="../assets/js/counter.js"></script>
+  <script src="../assets/js/typed.js"></script>
+  <script src="../assets/js/mixitup.min.js"></script>
+  <script src="../assets/js/progressbar.js"></script>
+  <script src="../assets/js/gsap.min.js"></script>
+  <script src="../assets/js/ScrollSmoother.min.js"></script>
+  <script src="../assets/js/ScrollToPlugin.min.js"></script>
+  <script src="../assets/js/ScrollTrigger.min.js"></script>
+  <script src="../assets/js/SplitText.min.js"></script>
+  <script src="../assets/js/TweenMax.min.js"></script>
+  <script src="../assets/js/jquery.meanmenu.min.js"></script>
+  <!-- <script src="../assets/js/basictable.min.js"></script> -->
+  <!-- <script src="../assets/js/beforeafter.jquery-1.0.0.min.js"></script> -->
+  <script src="../assets/js/backToTop.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/error-handling.js"></script>
+  <script src="../assets/js/wc-cursor.js"></script>
+
+
+
+</body>
+
+</html>
